@@ -1,0 +1,54 @@
+Wed Aug  5 11:10:38 EDT 2020
+scc-ne5
+~/PACT_M3D/PACT/src ~/PACT_M3D/PACT/M3D_covert/scripts
+lcffile = ../M3D_covert/lcf_files/M3D_lcf.csv
+config file=  ../M3D_covert/config_files/M3D.config
+model params file =  ../M3D_covert/modelParams_files/modelParams_M3D.config
+grid file = ../M3D_covert/results/M3D/M3D_64x64.grid.steady
+scp file =  ../M3D_covert/M3D_64x64.grid.steady
+log file =  ../M3D_covert/logs/M3D_64x64.log
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 8
+slots that were requested by the application:
+
+  Xyce
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+chipstack length 0.001
+chipstack width 0.001
+64 x 64 ; grid_length and width: 1.5625e-05 1.5625e-05
+318.15
+high-level solver = SPICE_transient
+low-level solver = TRAP
+Traceback (most recent call last):
+  File "PACT.py", line 634, in <module>
+    grid_temperature = solver.getTemperature(solver_properties)
+  File "/usr2/collab/kdhananj/PACT_M3D/PACT/src/SPICESolver_transient.py", line 386, in getTemperature
+    reshape_x = tmp.reshape(self.nl,self.nr,self.nc)
+ValueError: cannot reshape array of size 85000 into shape (13,64,64)
+~/PACT_M3D/PACT/M3D_covert/scripts
+Wed Aug  5 11:11:08 EDT 2020
+['64x64']
+4

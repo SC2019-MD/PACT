@@ -1,0 +1,48 @@
+Wed Aug  5 13:36:15 EDT 2020
+scc-pi8
+~/PACT_M3D/PACT/src ~/PACT_M3D/PACT/M3D_covert/scripts
+lcffile = ../M3D_covert/lcf_files/M3D_lcf.csv
+config file=  ../M3D_covert/config_files/M3D.config
+model params file =  ../M3D_covert/modelParams_files/modelParams_M3D.config
+grid file = ../M3D_covert/results/M3D/M3D_50x50.grid.steady
+scp file =  ../M3D_covert/M3D_50x50.grid.steady
+log file =  ../M3D_covert/logs/M3D_50x50.log
+Traceback (most recent call last):
+  File "PACT.py", line 458, in <module>
+    chipStack = ChipStack(lcf_df, defaultConfig, initTemp, defaultConfigFile,virtual_node_labels)
+  File "/usr2/collab/kdhananj/PACT_M3D/PACT/src/ChipStack.py", line 10, in __init__
+    self.create_Layer_data(lcf_df,defaultConfigFile,virtual_node_locations,config_df)
+  File "/usr2/collab/kdhananj/PACT_M3D/PACT/src/ChipStack.py", line 21, in create_Layer_data
+    self.Layers_data = lcf_df.apply(lambda x : Layer(x,defaultConfigFile,virtual_node_locations),axis=1) #Panda series
+  File "/share/pkg.7/python3/3.6.5/install/lib/python3.6/site-packages/pandas/core/frame.py", line 6014, in apply
+    return op.get_result()
+  File "/share/pkg.7/python3/3.6.5/install/lib/python3.6/site-packages/pandas/core/apply.py", line 142, in get_result
+    return self.apply_standard()
+  File "/share/pkg.7/python3/3.6.5/install/lib/python3.6/site-packages/pandas/core/apply.py", line 248, in apply_standard
+    self.apply_series_generator()
+  File "/share/pkg.7/python3/3.6.5/install/lib/python3.6/site-packages/pandas/core/apply.py", line 277, in apply_series_generator
+    results[i] = self.f(v)
+  File "/usr2/collab/kdhananj/PACT_M3D/PACT/src/ChipStack.py", line 21, in <lambda>
+    self.Layers_data = lcf_df.apply(lambda x : Layer(x,defaultConfigFile,virtual_node_locations),axis=1) #Panda series
+  File "/usr2/collab/kdhananj/PACT_M3D/PACT/src/Layer.py", line 11, in __init__
+    self.append_ptraces(lcf_row['PtraceFile'])
+  File "/usr2/collab/kdhananj/PACT_M3D/PACT/src/Layer.py", line 43, in append_ptraces
+    ptrace_df = pd.read_csv(ptrace_file)
+  File "/share/pkg.7/python3/3.6.5/install/lib/python3.6/site-packages/pandas/io/parsers.py", line 678, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/share/pkg.7/python3/3.6.5/install/lib/python3.6/site-packages/pandas/io/parsers.py", line 446, in _read
+    data = parser.read(nrows)
+  File "/share/pkg.7/python3/3.6.5/install/lib/python3.6/site-packages/pandas/io/parsers.py", line 1036, in read
+    ret = self._engine.read(nrows)
+  File "/share/pkg.7/python3/3.6.5/install/lib/python3.6/site-packages/pandas/io/parsers.py", line 1848, in read
+    data = self._reader.read(nrows)
+  File "pandas/_libs/parsers.pyx", line 876, in pandas._libs.parsers.TextReader.read
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._read_low_memory
+  File "pandas/_libs/parsers.pyx", line 945, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 932, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 2112, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: ('Error tokenizing data. C error: Expected 31 fields in line 4, saw 33\n', 'occurred at index 4')
+~/PACT_M3D/PACT/M3D_covert/scripts
+Wed Aug  5 13:36:20 EDT 2020
+['50x50']
+4
