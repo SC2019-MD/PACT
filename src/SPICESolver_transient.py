@@ -337,7 +337,6 @@ class SPICE_transientSolver:
 
 
                     #add capaciatance for extra package node
-    #add capacit    ance for extra package nodes
                     myfile.write("C_sp_per_y_top Node_sp_top GND {}\n".format(self.heatspreader_others['c_sp_per_y_constant']))
                     myfile.write("C_sp_per_y_bot Node_sp_bot GND {}\n".format(self.heatspreader_others['c_sp_per_y_constant']))
                     myfile.write("C_sp_per_x_left Node_sp_left GND {}\n".format(self.heatspreader_others['c_sp_per_x_constant']))
@@ -350,11 +349,15 @@ class SPICE_transientSolver:
                     myfile.write("C_hs_per_bot Node_hs_out_bot GND {}\n".format(self.heatsink_others['c_hs_per_constant']))
                     myfile.write("C_hs_per_left Node_hs_out_left GND {}\n".format(self.heatsink_others['c_hs_per_constant']))
                     myfile.write("C_hs_per_right Node_hs_out_right GND {}\n".format(self.heatsink_others['c_hs_per_constant']))
+                    myfile.write("C_amb_per_in_top Node_hs_in_top GND {}\n".format(self.heatsink_others['c_amb_per_constant']))
+                    myfile.write("C_amb_per_in__bot Node_hs_in_bot GND {}\n".format(self.heatsink_others['c_amb_per_constant']))
+                    myfile.write("C_amb_per_in_left Node_hs_in_left GND {}\n".format(self.heatsink_others['c_amb_per_constant']))
+                    myfile.write("C_amb_per_in_right Node_hs_in_right GND {}\n".format(self.heatsink_others['c_amb_per_constant']))
+            
                     myfile.write("C_amb_per_top Node_hs_out_top GND {}\n".format(self.heatsink_others['c_amb_per_constant']))
                     myfile.write("C_amb_per_bot Node_hs_out_bot GND {}\n".format(self.heatsink_others['c_amb_per_constant']))
                     myfile.write("C_amb_per_left Node_hs_out_left GND {}\n".format(self.heatsink_others['c_amb_per_constant']))
                     myfile.write("C_amb_per_right Node_hs_out_right GND {}\n".format(self.heatsink_others['c_amb_per_constant']))
-            
 
 
 

@@ -30,8 +30,8 @@ def defineGridProperties(length, height,thickness,properties,chip_length,chip_he
     Conv = 0
     #Zihao use this capacitance to validate with COMSOL
     #Capacitance=1*sp*length*height*thickness
-    hk_cap=0.33*hk_sp*thickness*length*height
-    hs_cap=0.33*hs_sp*thickness*length*height
+    hk_cap=0.33*hk_sp*heatsink_thickness*length*height
+    hs_cap=0.33*hs_sp*heatspreader_thickness*length*height
     #print('Zihao Single cap ********************',Capacitance)
     r_sp1_x = getr(1/hs_ro,(heatspreader_side-chip_length)/4.0,(heatspreader_side+3*chip_height)/4.0*heatspreader_thickness) 
     #print(r_sp1_x)
