@@ -233,7 +233,7 @@ class SPICE_transientSolver:
                         i = 1
                         #print(len(self.I[layer]))
                         if len(self.I[layer])>1:
-                            text = "I_{}_{}_{} GND Node{}_{}_{} PWL(0s 0A".format(layer,row,col,layer, row, col)
+                            text = "I_{}_{}_{} GND Node{}_{}_{} PWL(0s 0A ".format(layer,row,col,layer, row, col)
                             while i<=len(self.I[layer]):
                                 temp = re.compile("([0-9.]+)([a-zA-Z]+)")
                                 res = temp.match(self.ptrace_step_size).groups()

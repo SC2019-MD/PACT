@@ -671,10 +671,11 @@ if modelParams._sections['Solver'].get('name') == 'SPICE_transient':
              if num!=0:
                  tmp = np.asarray(list(map(float,lines.split(',')[1:])))
                  reshape = tmp.reshape(int(num_layers),int(grid_rows),int(grid_cols))
-                 with open("RC_transient_block_temp.csv","a") as myfile:
-                     myfile.write("step "+str(num-1)+" ")
-                 #print(reshape)
-                 gridManager.grid2block(chipStack, reshape, modelParams.get('Grid','grid_mode'),transient=True)
+                 if num != 1:
+                     with open("RC_transient_block_temp.csv","a") as myfile:
+                         myfile.write("step "+str(num-2)+" ")
+                     #print(reshape)
+                     gridManager.grid2block(chipStack, reshape, modelParams.get('Grid','grid_mode'),transient=True)
 gridManager.grid2block(chipStack, grid_temperature,modelParams.get('Grid','grid_mode'))
 
 #chipStack.display_Floorplans()

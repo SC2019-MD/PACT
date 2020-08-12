@@ -76,3 +76,5 @@
 552inputs+0outputs (0major+35780minor)pagefaults 0swaps
 395.39user 7.90system 1:30.53elapsed 445%CPU (0avgtext+0avgdata 273000maxresident)k
 0inputs+74536outputs (6major+2224739minor)pagefaults 0swaps
+37.59user 0.37system 0:53.74elapsed 70%CPU (0avgtext+0avgdata 96632maxresident)k
+1696inputs+54888outputs (6major+104895minor)pagefaults 0swaps
