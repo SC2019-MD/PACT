@@ -21,12 +21,12 @@ def defineGridProperties(length, height,thickness,properties,chip_length,chip_he
     hs_ro = 1/float(properties['heatspreader_thermalconductivity (w/(m-k))'])
     hs_sp = float(properties['heatspreader_specificheatcapacity (j/m^3k)'])
     #Rz = round(ro*thickness/(length*height),6)
-    hk_Rx = hk_ro*length/(height*thickness)
-    hk_Ry = hk_ro*height/(length*thickness)
-    hk_Rz = hk_ro*thickness/(length*height)
-    hs_Rx = hs_ro*length/(height*thickness)
-    hs_Ry = hs_ro*height/(length*thickness)
-    hs_Rz = hs_ro*thickness/(length*height)
+    hk_Rx = hk_ro*length/(height*heatsink_thickness)
+    hk_Ry = hk_ro*height/(length*heatsink_thickness)
+    hk_Rz = hk_ro*heatsink_thickness/(length*height)+con_r*(heatsink_side*heatsink_side)/(length*height)
+    hs_Rx = hs_ro*length/(height*heatspreader_thickness)
+    hs_Ry = hs_ro*height/(length*heatspreader_thickness)
+    hs_Rz = hs_ro*heatspreader_thickness/(length*height)
     Conv = 0
     #Zihao use this capacitance to validate with COMSOL
     #Capacitance=1*sp*length*height*thickness

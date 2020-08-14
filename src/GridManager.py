@@ -523,7 +523,7 @@ class GridManager:
 
 
             #print(layer_obj.VerticalHeatFlow)
-            r_amb = 1/(1e5*grid_length*grid_width) + HeatSink_info['Rz']
+            r_amb = HeatSink_info['Rz']
             layer_obj.Rz = np.full((int(self.grid_dict['rows']),int(self.grid_dict['cols'])),r_amb)
             if(layer_obj.layer_num == num_layers-2):
                 layer_obj.Rz = np.ones(self.Rz.shape) * HeatSpreader_info['Rz']

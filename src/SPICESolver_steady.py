@@ -216,11 +216,13 @@ class SPICE_steadySolver:
                         Rb = 100000000
                     """
                     if(layer < self.layer_limit):
-                        Rb = float(self.factorVN[self.layerVN[layer]])*self.Rz[layer][row][col] + \
-                        (1-float(self.factorVN[self.layerVN[layer+1]]))*self.Rz[layer+1][row][col]
-                    else: 
-                        #Rb = math.inf
+                        Rb = float(self.factorVN[self.layerVN[layer]])*self.Rz[layer][row][col] + (1-float(self.factorVN[self.layerVN[layer+1]]))*self.Rz[layer+1][row][col]
+                    elif layer == self.heatsink:
+                        Rb = float(self.factorVN[self.layerVN[layer]])*self.Rz[layer][row][col]
+                    else:
+                          
                         Rb = 100000000
+
                 #current
                     #if self.I[layer][row][col]!=0:
 		    #Zihao: I don't know why both layer1 and layer2 has power in this case, the ptrace and flp shows only the first layers has power. I need to ask prachi about this self.I.items.
@@ -280,8 +282,10 @@ class SPICE_steadySolver:
                 #above resistance
                     if layer != self.layer_limit: 
                         myfile.write("R_{}_{}_{}_3 Node{}_{}_{} Node{}_{}_{} {}\n".format(layer,row,col,layer, row, col,layer+1,row,col,Rb))
-                    elif layer!=self.heatsink:
+                    elif layer !=self.heatsink:
                         myfile.write("R_{}_{}_{}_3 Node{}_{}_{} GND {}\n".format(layer,row,col,layer, row, col,self.r_amb))
+                    elif layer ==self.heatsink:
+                        myfile.write("R_{}_{}_{}_3 Node{}_{}_{} GND {}\n".format(layer,row,col,layer, row, col,Rb))
                 if len(self.heatsink_layer)!=0:
                     #add heat spreader to heat sink inner node
                     myfile.write(f"R_sp_hs_in_left Node_sp_left Node_hs_in_left {self.heatspreader_others['r_sp_per_x_constant']}")
