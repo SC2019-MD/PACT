@@ -310,7 +310,6 @@ class GridManager:
                 #for x in label_ll:
                 #    print('single' in self.label_mode_dict[x])
             #print("*************************************Zihao:",self.C)
-		
             self.vector_evaluateRC(X_vals,Y_vals,length_vals, height_vals, PowerDensities,left_x_vals,right_x_vals,bottom_y_vals,top_y_vals,label_vals,flp_df['ConfigFile'].values,block_counter,grid_length,grid_width, layer_obj.layer_num)
 
                 #sys.exit(0)
@@ -590,7 +589,6 @@ class GridManager:
             #print("matrix mode in evaluate RC with zero power density...EXITING")
             self.Lock[topY:bottomY+1,leftX:rightX+1] +=1
             return
-
         area = grid_length * grid_width
         #power = round(PowerDensity * area,6)
         power = PowerDensity * area
@@ -600,7 +598,6 @@ class GridManager:
         power_mat_reshape = np.reshape(power_mat, (len(power_mat),1,1), order='C')
         #print(type(power_mat),power_mat[0],power_mat)
         #Zihao Debug
-        #print(power_mat)
         #print(power_mat_reshape)
         #if block_idx == 4:
         #    sys.exit(0)

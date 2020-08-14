@@ -1,13 +1,2 @@
 Layer,FloorplanFile,Thickness (m),PtraceFile,LateralHeatFlow
-0,../M3D_covert/flp_files/M3D_10mm_other_diel_flp.csv,0.00000012,,True
-1,../M3D_covert/flp_files/M3D_10mm_other_diel_flp.csv,0.00000013,,True
-2,../M3D_covert/flp_files/M3D_10mm_other_diel_flp.csv,0.000000085,,True
-3,../M3D_covert/flp_files/M3D_10mm_other_diel_flp.csv,0.000000085,,True
-4,../M3D_covert/flp_files/M3D_10mm_tier1_flp.csv,0.0000005,../M3D_covert/ptrace_files/M3D_tier1_ptrace.csv,True
-5,../M3D_covert/flp_files/M3D_10mm_other_metal_flp.csv,100e-9,,True
-6,../M3D_covert/flp_files/M3D_10mm_other_metal_flp.csv,0.00000013,,True
-7,../M3D_covert/flp_files/M3D_10mm_other_metal_flp.csv,0.000000085,,True
-8,../M3D_covert/flp_files/M3D_10mm_other_metal_flp.csv,0.000000085,,True
-9,../M3D_covert/flp_files/M3D_10mm_other_metal_flp.csv,0.00000032,,True
-10,../M3D_covert/flp_files/M3D_10mm_tier0_flp.csv,0.0000005,../M3D_covert/ptrace_files/M3D_tier0_ptrace.csv,True
-11,../M3D_covert/flp_files/M3D_10mm_other_poly_flp.csv,0.000076,,True
+0,../M3D_covert/flp_files/M3D_10mm_tier1_flp.csv,0.0000005,../M3D_covert/ptrace_files/M3D_tier1_ptrace.csv,True

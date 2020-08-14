@@ -1,0 +1,51 @@
+/var/spool/sge/scc-pf2/job_scripts/8758683: line 5: module: command not found
+/var/spool/sge/scc-pf2/job_scripts/8758683: line 6: module: command not found
+/var/spool/sge/scc-pf2/job_scripts/8758683: line 7: module: command not found
+/var/spool/sge/scc-pf2/job_scripts/8758683: line 8: module: command not found
+/var/spool/sge/scc-pf2/job_scripts/8758683: line 9: module: command not found
+/var/spool/sge/scc-pf2/job_scripts/8758683: line 10: module: command not found
+/var/spool/sge/scc-pf2/job_scripts/8758683: line 11: module: command not found
+Wed Aug 12 17:35:53 EDT 2020
+scc-pf2
+/projectnb/peaclab-cri-cooling/EDAToolDevelopment/PACT/src /projectnb/peaclab-cri-cooling/EDAToolDevelopment/PACT/M3D/scripts
+lcffile = ../M3D/lcf_files/M3D_lcf.csv
+config file=  ../M3D/config_files/M3D.config
+model params file =  ../M3D/modelParams_files/modelParams_M3D.config
+grid file = ../M3D/results/M3D/M3D_50x50.grid.steady
+scp file =  ../M3D/M3D_50x50.grid.steady
+log file =  ../M3D/logs/M3D_50x50.log
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[49122,1],0]
+  Exit code:    127
+--------------------------------------------------------------------------
+chipstack length 0.01
+chipstack width 0.01
+50 x 50 ; grid_length and width: 0.0002 0.0002
+318.15
+high-level solver = SPICE_transient
+low-level solver = TRAP
+Traceback (most recent call last):
+  File "PACT.py", line 307, in <module>
+    grid_temperature = solver.getTemperature(solver_properties)
+  File "/projectnb/peaclab-cri-cooling/EDAToolDevelopment/PACT/src/SPICESolver_transient.py", line 298, in getTemperature
+    with open('RC_transient.cir.csv','r') as myfile:
+FileNotFoundError: [Errno 2] No such file or directory: 'RC_transient.cir.csv'
+/projectnb/peaclab-cri-cooling/EDAToolDevelopment/PACT/M3D/scripts
+Wed Aug 12 17:37:02 EDT 2020
+['50x50']
+8

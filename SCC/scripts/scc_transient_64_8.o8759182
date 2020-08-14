@@ -1,0 +1,149 @@
+Wed Aug 12 18:27:21 EDT 2020
+scc-pc5
+/projectnb/peaclab-cri-cooling/EDAToolDevelopment/PACT/src /projectnb/peaclab-cri-cooling/EDAToolDevelopment/PACT/SCC/scripts
+lcffile = ../SCC/lcf_files/scc_lcf.csv
+config file=  ../SCC/config_files/scc.config
+model params file =  ../SCC/modelParams_files/modelParams_scc.config
+grid file = ../SCC/results/scc/scc_256x256.grid.steady
+scp file =  ../SCC/scc_256x256.grid.steady
+log file =  ../SCC/logs/scc_256x256.log
+chipstack length 0.02
+chipstack width 0.02
+256 x 256 ; grid_length and width: 7.8125e-05 7.8125e-05
+318.15
+high-level solver = SPICE_steady
+low-level solver = KLU
+layer number:0
+     UnitName  BlockTemperature
+0    EdgeL4_0             65.96
+1    EdgeL4_1             68.04
+2        L2_0             65.41
+3        L2_1             66.20
+4        L2_2             66.52
+5        L2_3             66.66
+6        L2_4             66.72
+7        L2_5             66.72
+8        L2_6             66.74
+9        L2_7             66.69
+10       L2_8             66.65
+11       L2_9             66.68
+12      L2_10             66.66
+13      L2_11             66.67
+14      L2_12             66.62
+15      L2_13             66.46
+16      L2_14             66.11
+17      L2_15             65.29
+18   EdgeL4_2             68.03
+19     Core_0             67.08
+20     Core_1             67.95
+21     Core_2             68.30
+22     Core_3             68.44
+23     Core_4             68.49
+24     Core_5             68.49
+25     Core_6             68.50
+26     Core_7             68.48
+27     Core_8             68.45
+28     Core_9             68.46
+29    Core_10             68.45
+..        ...               ...
+486    L2_243             69.72
+487    L2_244             69.77
+488    L2_245             69.79
+489    L2_246             69.78
+490    L2_247             69.77
+491    L2_248             69.79
+492    L2_249             69.80
+493    L2_250             69.80
+494    L2_251             69.80
+495    L2_252             69.75
+496    L2_253             69.59
+497    L2_254             69.22
+498    L2_255             68.26
+499  Core_240             68.23
+500  Core_241             69.14
+501  Core_242             69.51
+502  Core_243             69.64
+503  Core_244             69.70
+504  Core_245             69.69
+505  Core_246             69.71
+506  Core_247             69.67
+507  Core_248             69.70
+508  Core_249             69.74
+509  Core_250             69.72
+510  Core_251             69.74
+511  Core_252             69.68
+512  Core_253             69.53
+513  Core_254             69.17
+514  Core_255             68.26
+515  EdgeL4_3             69.46
+
+[516 rows x 2 columns]
+layer number:1
+     UnitName  BlockTemperature
+0    EdgeL4_0             54.13
+1    EdgeL4_1             54.73
+4        L2_0             56.82
+6        L2_1             56.94
+8        L2_2             56.94
+10       L2_3             56.91
+12       L2_4             56.91
+14       L2_5             56.88
+16       L2_6             56.57
+18       L2_7             54.73
+20       L2_8             59.22
+22       L2_9             59.57
+24      L2_10             59.61
+26      L2_11             59.60
+28      L2_12             59.58
+30      L2_13             59.57
+32      L2_14             59.44
+34      L2_15             58.38
+2    EdgeL4_2             55.96
+5      Core_0             56.90
+7      Core_1             56.94
+9      Core_2             56.93
+11     Core_3             56.92
+13     Core_4             56.91
+15     Core_5             56.79
+17     Core_6             55.90
+19     Core_7             58.44
+21     Core_8             59.47
+23     Core_9             59.60
+25    Core_10             59.61
+..        ...               ...
+490    L2_243             60.49
+492    L2_244             60.51
+494    L2_245             60.51
+496    L2_246             60.36
+498    L2_247             59.25
+500    L2_248             59.61
+502    L2_249             59.96
+504    L2_250             60.00
+506    L2_251             59.99
+508    L2_252             60.02
+510    L2_253             60.01
+512    L2_254             59.88
+514    L2_255             58.81
+485  Core_240             60.35
+487  Core_241             60.49
+489  Core_242             60.50
+491  Core_243             60.50
+493  Core_244             60.51
+495  Core_245             60.47
+497  Core_246             60.10
+499  Core_247             58.79
+501  Core_248             59.86
+503  Core_249             60.00
+505  Core_250             60.00
+507  Core_251             60.01
+509  Core_252             60.02
+511  Core_253             59.98
+513  Core_254             59.63
+515  Core_255             55.29
+3    EdgeL4_3             56.62
+
+[516 rows x 2 columns]
+/projectnb/peaclab-cri-cooling/EDAToolDevelopment/PACT/SCC/scripts
+Wed Aug 12 18:28:08 EDT 2020
+['256x256']
+8

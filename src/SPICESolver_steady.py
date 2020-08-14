@@ -246,7 +246,7 @@ class SPICE_steadySolver:
                         myfile.write("Rsp_{}_{}_{}_1 Node{}_{}_{} Node_sp_left {}\n".format(layer,row,col,layer, row, col,self.Rx[layer][row][col]/2+self.row_limit*self.heatspreader_others['r_sp1_x_constant']))
                 #Heat Sink left
                     if col == 0 and layer==self.heatsink:
-                        myfile.write("Rhs_{}_{}_{}_1 Node{}_{}_{} Node_hs_right {}\n".format(layer,row,col,layer, row, col,self.Rx[layer][row][col]/2+self.row_limit*self.heatsink_others['r_hs1_x_constant']))
+                        myfile.write("Rhs_{}_{}_{}_1 Node{}_{}_{} Node_hs_left {}\n".format(layer,row,col,layer, row, col,self.Rx[layer][row][col]/2+self.row_limit*self.heatsink_others['r_hs1_x_constant']))
                 #north resistance
                     if row != self.row_limit:	    
                         #not liquid grid cell

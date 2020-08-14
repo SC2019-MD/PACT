@@ -1,0 +1,44 @@
+Wed Aug 12 17:51:10 EDT 2020
+scc-bc4
+/projectnb/peaclab-cri-cooling/EDAToolDevelopment/PACT/src /projectnb/peaclab-cri-cooling/EDAToolDevelopment/PACT/SCC/scripts
+lcffile = ../SCC/lcf_files/scc_lcf.csv
+config file=  ../SCC/config_files/scc.config
+model params file =  ../SCC/modelParams_files/modelParams_scc.config
+grid file = ../SCC/results/scc/scc_256x256.grid.steady
+scp file =  ../SCC/scc_256x256.grid.steady
+log file =  ../SCC/logs/scc_256x256.log
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+Xyce: error while loading shared libraries: libloca.so.12: cannot open shared object file: No such file or directory
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[20374,1],0]
+  Exit code:    127
+--------------------------------------------------------------------------
+chipstack length 0.02
+chipstack width 0.02
+256 x 256 ; grid_length and width: 7.8125e-05 7.8125e-05
+318.15
+high-level solver = SPICE_steady
+low-level solver = KLU
+Traceback (most recent call last):
+  File "PACT.py", line 307, in <module>
+    grid_temperature = solver.getTemperature(solver_properties)
+  File "/projectnb/peaclab-cri-cooling/EDAToolDevelopment/PACT/src/SPICESolver_steady.py", line 247, in getTemperature
+    with open('RC_steady.cir.csv','r') as myfile:
+FileNotFoundError: [Errno 2] No such file or directory: 'RC_steady.cir.csv'
+/projectnb/peaclab-cri-cooling/EDAToolDevelopment/PACT/SCC/scripts
+Wed Aug 12 17:51:25 EDT 2020
+['256x256']
+8

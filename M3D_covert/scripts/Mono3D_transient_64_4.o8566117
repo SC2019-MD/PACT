@@ -1,9 +1,0 @@
-Wed Aug  5 11:24:59 EDT 2020
-scc-pi8
-~/PACT_M3D/PACT/src ~/PACT_M3D/PACT/M3D_covert/scripts
-lcffile = ../M3D_covert/lcf_files/M3D_lcf.csv
-config file=  ../M3D_covert/config_files/M3D.config
-model params file =  ../M3D_covert/modelParams_files/modelParams_M3D.config
-grid file = ../M3D_covert/results/M3D/M3D_50x50.grid.steady
-scp file =  ../M3D_covert/M3D_50x50.grid.steady
-log file =  ../M3D_covert/logs/M3D_50x50.log
